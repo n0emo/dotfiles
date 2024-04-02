@@ -1,0 +1,54 @@
+@define-color text #b8b4d0;
+@define-color bg1 #16161D;
+@define-color bg2 #2A2A37;
+@define-color border #938AA9;
+
+* {
+    border: none;
+    border-radius: 0;
+    font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+    font-size: 16px;
+}
+
+window#waybar {
+    background: alpha(@bg1, 0.95);
+    color: @text;
+    margin: 10px;
+    border-radius: 20px;
+}
+
+#workspaces button {
+    color: @text
+}
+
+tooltip {
+    background: @bg1;
+    border: 1px solid @border;
+    border-radius: 10px;
+}
+
+tooltip label {
+    color: @text;
+}
+
+#workspaces,
+#window,
+#clock,
+#network,
+#wireplumber,
+#custom-media,
+#tray,
+#mode,
+#idle_inhibitor,
+#scratchpad,
+#keyboard-state,
+#power-profiles-daemon,
+#mpris,
+#language,
+#cava,
+#mpd {
+    background: @bg2;
+    padding: 0 10px;
+    border-radius: 20px;
+}
+
