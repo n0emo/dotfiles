@@ -5,9 +5,7 @@ require("mason-lspconfig").setup {
 		"pyright",
 		"lua_ls",
 		"clangd",
-		"als", 
 		"omnisharp",
-		"sqls",
 		"julials"
 	},
 }
