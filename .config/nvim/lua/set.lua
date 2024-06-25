@@ -1,25 +1,41 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
+vim.g.have_nerd_font = false
 
-local set = vim.opt
+vim.opt.showmode = false
 
-set.number = true
-set.relativenumber = true
+vim.opt.clipboard = 'unnamedplus'
 
-set.tabstop = 4
-set.scrolloff = 15
-set.shiftwidth = 4
-set.softtabstop = 4
+vim.opt.number = true
+vim.opt.relativenumber = true
 
-set.splitbelow = true
-set.splitright = true
+vim.opt.tabstop = 4
+vim.opt.scrolloff = 15
+vim.opt.shiftwidth = 4
+vim.opt.softtabstop = 4
+vim.opt.expandtab = true
 
-set.smartcase = true
-set.ignorecase = true
+vim.opt.splitbelow = true
+vim.opt.splitright = true
 
-set.wrap = false
-set.smartindent = true
-set.termguicolors = true
+vim.opt.smartcase = true
+vim.opt.ignorecase = true
 
-set.backup = false
-set.swapfile = false
+vim.opt.wrap = false
+vim.opt.smartindent = true
+vim.opt.breakindent = true
+vim.opt.termguicolors = true
+
+vim.opt.backup = false
+vim.opt.swapfile = false
+
+vim.opt.updatetime = 250
+
+vim.opt.list = true
+vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
+
+vim.opt.inccommand = 'split'
+vim.opt.cursorline = true
+
+vim.opt.hlsearch = true
+vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
