@@ -39,4 +39,6 @@ vim.opt.cursorline = true
 
 vim.opt.hlsearch = true
 
+vim.opt.signcolumn = 'yes'
+
 vim.opt.wrap = true

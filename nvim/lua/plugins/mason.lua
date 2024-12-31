@@ -21,22 +21,5 @@ return {
         },
       },
     })
-
-    lspconfig.setup({
-      ensure_installed = {
-        "pyright",
-        "lua_ls",
-        "clangd",
-        "omnisharp",
-        "julials",
-        "html",
-      },
-    })
-
-    tool_installer.setup({
-      ensure_installed = {
-        "stylua",
-      },
-    })
   end,
 }

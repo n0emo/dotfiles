@@ -1,5 +1,0 @@
-[Desktop Entry]
-Name=Hyprland-Script
-Comment=An intelligent dynamic tiling Wayland compositor
-Exec=/usr/local/bin/hyprland.sh
-Type=Application

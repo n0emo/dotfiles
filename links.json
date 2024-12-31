@@ -1,0 +1,7 @@
+{
+  "common": [
+    ["wezterm", "~/.config/wezterm", true],
+    ["nvim", "~/.config/nvim", true]
+  ],
+  "linux": []
+}

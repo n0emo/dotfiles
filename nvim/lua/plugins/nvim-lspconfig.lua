@@ -7,22 +7,39 @@ return {
   },
   config = function()
     local lspconfig = require("lspconfig")
-    lspconfig.pyright.setup({})
-    lspconfig.lua_ls.setup({})
-    lspconfig.clangd.setup({})
-    lspconfig.als.setup({})
-    lspconfig.omnisharp.setup({})
-    lspconfig.sqls.setup({})
-    lspconfig.julials.setup({})
 
     local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
     require("mason-lspconfig").setup_handlers({
       function(server_name)
-        require("lspconfig")[server_name].setup({
+        lspconfig[server_name].setup({
           capabilities = capabilities,
         })
       end,
+    })
+
+    lspconfig.clangd.setup({
+      auto_start = false,
+    })
+
+    lspconfig.pyright.setup({
+      auto_start = false,
+    })
+
+    lspconfig.gopls.setup({
+      auto_start = false,
+    })
+
+    lspconfig.rust_analyzer.setup({
+      auto_start = false,
+    })
+
+    lspconfig.gleam.setup({
+      auto_start = false,
+    })
+
+    lspconfig.csharp_ls.setup({
+      auto_start = false,
     })
 
     -- More LSP mappings
