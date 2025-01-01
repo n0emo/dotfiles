@@ -1,7 +1,10 @@
 {
   "common": [
     ["wezterm", "~/.config/wezterm", true],
-    ["nvim", "~/.config/nvim", true]
+    ["nvim", "~/.config/nvim", true],
+    ["fish/config.fish", "~/.config/fish/config.fish"]
   ],
-  "linux": []
+  "air": [
+    ["fish/host-air.fish", "~/.config/fish/host.fish"]
+  ]
 }
