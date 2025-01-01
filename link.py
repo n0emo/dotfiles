@@ -2,6 +2,8 @@
 
 import json
 import os
+from os.path import islink
+import sys
 
 
 def get_path(s):
@@ -23,11 +25,25 @@ def process_links(links):
         src = get_path(src)
         dst = get_path(dst)
 
-        try:
-            os.symlink(src, dst, is_dir)
-            print(f"Created symlink: '{dst}' -> '{src}'")
-        except FileExistsError:
-            print(f"Already exists: '{dst}'")
+        if '-f' in sys.argv:
+            try:
+                if os.path.islink(dst) and os.readlink(dst) == src:
+                    print(f"Already exists: '{dst}' -> '{src}'")
+                else:
+                    if os.path.exists(dst):
+                        print(f"Moved: '{dst}' to '{src}.bak'")
+                        os.rename(dst, dst + ".bak")
+                    print(f"Created symlink: '{dst}' -> '{src}'")
+                    os.symlink(src, dst, is_dir)
+            except FileNotFoundError:
+                print(f"Created symlink: '{dst}' -> '{src}'")
+                os.symlink(src, dst, is_dir)
+        else:
+            try:
+                os.symlink(src, dst, is_dir)
+                print(f"Created symlink: '{dst}' -> '{src}'")
+            except FileExistsError:
+                print(f"Already exists: '{dst}'")
 
 
 def main():
