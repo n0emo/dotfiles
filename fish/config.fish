@@ -7,4 +7,6 @@ if status is-interactive
     if test -e $HOME/.config/fish/host.fish
         source $HOME/.config/fish/host.fish
     end
+
+    fish_vi_key_bindings
 end
