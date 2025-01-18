@@ -11,6 +11,13 @@ def get_path(s):
     return os.path.abspath(p)
 
 
+def create_symlink(src, dst, is_dir):
+    parent = os.path.dirname(dst)
+    os.makedirs(parent, exist_ok = True)
+    os.symlink(src, dst, is_dir)
+    print(f"Created symlink: '{dst}' -> '{src}'")
+
+
 def process_links(links):
     for link in links:
         if isinstance(link, list):
@@ -33,14 +40,12 @@ def process_links(links):
                     if os.path.exists(dst):
                         print(f"Moved: '{dst}' to '{src}.bak'")
                         os.rename(dst, dst + ".bak")
-                    print(f"Created symlink: '{dst}' -> '{src}'")
-                    os.symlink(src, dst, is_dir)
+                    create_symlink(src, dst, is_dir)
             except FileNotFoundError:
-                print(f"Created symlink: '{dst}' -> '{src}'")
-                os.symlink(src, dst, is_dir)
+                create_symlink(src, dst, is_dir)
         else:
             try:
-                os.symlink(src, dst, is_dir)
+                create_symlink(src, dst, is_dir)
                 print(f"Created symlink: '{dst}' -> '{src}'")
             except FileExistsError:
                 print(f"Already exists: '{dst}'")

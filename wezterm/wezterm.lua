@@ -9,10 +9,10 @@ config.window_background_opacity = 0.90
 
 config.tab_bar_at_bottom = true
 
---config.font = wezterm.font {
---  family = 'JetBrains Mono',
---  harfbuzz_features = { 'calt=0', 'clig=0', 'liga=0' },
---}
+config.font = wezterm.font {
+  family = 'JetBrains Mono',
+  harfbuzz_features = { 'calt=0', 'clig=0', 'liga=0' },
+}
 config.font_size = 14
 
 local host_profile = {
@@ -45,5 +45,9 @@ config.keys = {
     action = wezterm.action.CloseCurrentTab { confirm = false },
   },
 }
+
+if wezterm.target_triple == 'x86_64-pc-windows-msvc' then
+  config.default_prog = { 'powershell.exe',  '-nologo' }
+end
 
 return config
