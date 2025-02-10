@@ -42,3 +42,7 @@ vim.opt.hlsearch = true
 vim.opt.signcolumn = 'yes'
 
 vim.opt.wrap = true
+
+--vim.opt.foldmethod = "expr"
+--vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
+--vim.opt.foldlevelstart = 99
