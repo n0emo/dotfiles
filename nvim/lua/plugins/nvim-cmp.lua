@@ -46,16 +46,6 @@ return {
           return vim_item
         end,
       },
-      enabled = function ()
-        local context = require("cmp.config.context")
-        if vim.api.nvim_get_mode().mode == "c" then
-          return true
-        else
-          return not context.in_treesitter_capture("comment")
-            and not context.in_syntax_group("Comment")
-            and not context.in_treesitter_capture("string")
-        end
-      end
     })
 
     cmp.event:on("confirm_done", cmp_autopairs.on_confirm_done())
