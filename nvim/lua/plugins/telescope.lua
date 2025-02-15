@@ -24,12 +24,14 @@ return {
     vim.keymap.set("n", "<leader>fb", builtin.buffers, {})
     vim.keymap.set("n", "<leader>fh", builtin.help_tags, {})
 
-    vim.keymap.set("n", "fr", builtin.lsp_references)
-    vim.keymap.set("n", "fD", builtin.lsp_definitions)
-    vim.keymap.set("n", "fi", builtin.lsp_implementations)
-    vim.keymap.set("n", "ft", builtin.lsp_type_definitions)
-    vim.keymap.set("n", "fd", builtin.diagnostics)
+    vim.keymap.set("n", "<leader>sw", builtin.spell_suggest, {})
 
-    vim.keymap.set("n", "fs", builtin.git_status)
+    vim.keymap.set("n", "<leader>fr", builtin.lsp_references)
+    vim.keymap.set("n", "<leader>fD", builtin.lsp_definitions)
+    vim.keymap.set("n", "<leader>fi", builtin.lsp_implementations)
+    vim.keymap.set("n", "<leader>ft", builtin.lsp_type_definitions)
+    vim.keymap.set("n", "<leader>fd", builtin.diagnostics)
+
+    vim.keymap.set("n", "<leader>fs", builtin.git_status)
   end,
 }
