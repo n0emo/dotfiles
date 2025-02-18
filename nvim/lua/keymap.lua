@@ -17,3 +17,5 @@ vim.keymap.set('n', '<leader>td', function()
 end, { silent = true, noremap = true })
 
 vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { silent = true, noremap = true })
+
+vim.keymap.set('n', '<leader>ss', '<CMD>ClangdSwitchSourceHeader<CR>')
