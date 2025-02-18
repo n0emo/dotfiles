@@ -42,10 +42,6 @@ return {
       auto_start = false,
     })
 
-    lspconfig.cmake_language_server.setup({
-      auto_start = false,
-    })
-
     -- More LSP mappings
     vim.api.nvim_create_autocmd("LspAttach", {
       group = vim.api.nvim_create_augroup("UserLspConfig", {}),
