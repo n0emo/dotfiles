@@ -29,7 +29,6 @@ return {
     vim.keymap.set("n", "<leader>fr", builtin.lsp_references)
     vim.keymap.set("n", "<leader>fD", builtin.lsp_definitions)
     vim.keymap.set("n", "<leader>fi", builtin.lsp_implementations)
-    vim.keymap.set("n", "<leader>ft", builtin.lsp_type_definitions)
     vim.keymap.set("n", "<leader>fs", builtin.lsp_document_symbols)
     vim.keymap.set("n", "<leader>fd", builtin.diagnostics)
   end,

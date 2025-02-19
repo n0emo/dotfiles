@@ -1,0 +1,12 @@
+snippet once
+    #ifndef ${1:`toupper(substitute(expand('%:.:r'), '/', '_', 'g')) . '_H_'`}
+    #define $1
+
+    ${0}
+
+    #endif // $1
+
+snippet struct
+    typedef struct ${1} {
+        ${0}
+    } $1;
