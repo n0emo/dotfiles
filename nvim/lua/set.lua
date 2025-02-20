@@ -32,7 +32,8 @@ vim.opt.swapfile = false
 vim.opt.updatetime = 250
 
 vim.opt.list = true
-vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
+-- vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
+vim.opt.listchars = { tab = "  ", trail = "·", nbsp = "␣" }
 
 vim.opt.inccommand = "split"
 vim.opt.cursorline = true
