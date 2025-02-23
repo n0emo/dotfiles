@@ -14,7 +14,9 @@ function Invoke-Environment {
     }}
 }
 
-Invoke-Environment "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\Build\vcvars64.bat"
+function VS-Env {
+    Invoke-Environment "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\Build\vcvars64.bat"
+}
 
 oh-my-posh init pwsh | Invoke-Expression
 
