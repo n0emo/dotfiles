@@ -1,0 +1,11 @@
+[user]
+	email = dev_n0emo@tuta.io
+	name = Albert Shefner
+
+[alias]
+    st = status
+    co = commit
+    ch = checkout
+    br = branch
+    unstage = reset HEAD --
+    last = log -1 HEAD
