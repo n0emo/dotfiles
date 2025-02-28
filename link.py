@@ -46,7 +46,6 @@ def process_links(links):
         else:
             try:
                 create_symlink(src, dst, is_dir)
-                print(f"Created symlink: '{dst}' -> '{src}'")
             except FileExistsError:
                 print(f"Already exists: '{dst}'")
 
