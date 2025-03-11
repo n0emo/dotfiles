@@ -12,6 +12,7 @@
   "ryzenpc": [
     ["fish/host-ryzenpc.fish", "~/.config/fish/host.fish"],
     ["hypr/hyprland.conf", "~/.config/hypr/hyprland.conf"],
+    ["hypr/hyprlock.conf", "~/.config/hypr/hyprlock.conf"],
     ["hypr/host-ryzenpc.conf", "~/.config/hypr/host.conf"],
     ["waybar", "~/.config/waybar", true],
     ["rofi", "~/.config/rofi", true],
