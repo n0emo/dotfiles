@@ -7,11 +7,16 @@
     "margin-right": 10,
     "margin-bottom": 0,
 
-    "modules-left": ["hyprland/workspaces", "mpris"],
+    "modules-left": ["hyprland/workspaces", "sway/workspaces", "mpris"],
     "modules-center": ["clock"],
-    "modules-right": ["hyprland/language", "keyboard-state", "wireplumber", "network", "tray"],
+    "modules-right": ["sway/mode", "hyprland/language", "sway/language", "keyboard-state", "wireplumber", "network", "tray"],
 
     // Modules configuration
+    "sway/mode": {
+        "format": "{}",
+        "max-length": 50
+    },
+
     "hyprland/workspaces": {
         "persistent-workspaces": {
             "*": 5,
@@ -22,6 +27,29 @@
          "urgent": "",
          "active": "",
          "default": "",
+        }
+    },
+
+    "sway/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "format": "{icon}",
+        "persistent-workspaces": {
+            "1": [],
+            "2": [],
+            "3": [],
+            "4": [],
+            "5": [],
+        },
+        "format-icons": {
+            // "1": "",
+            // "2": "",
+            // "3": "",
+            // "4": "",
+            // "5": "",
+            "urgent": "",
+            "focused": "",
+            "default": "",
         }
     },
 
@@ -50,7 +78,8 @@
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
         "format-wifi": "{essid} ({signalStrength}%) ",
-        "format-ethernet": "{ipaddr}/{cidr} 󰈀",
+        // "format-ethernet": "{ipaddr}/{cidr} 󰈀",
+        "format-ethernet": "Ethernet 󰈀",
         "tooltip-format": "{ifname} via {gwaddr} ",
         "format-linked": "{ifname} (No IP) ",
         "format-disconnected": "Disconnected ⚠",
