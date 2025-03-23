@@ -5,7 +5,8 @@ local config = wezterm.config_builder()
 -- config.front_end = "WebGpu"
 
 config.color_scheme = 'Kanagawa (Gogh)'
-config.window_background_opacity = 0.90
+config.window_background_opacity = 0.9
+config.win32_system_backdrop = "Disable"
 
 config.tab_bar_at_bottom = true
 
@@ -47,7 +48,7 @@ config.keys = {
 }
 
 if wezterm.target_triple == 'x86_64-pc-windows-msvc' then
-  config.default_prog = { 'powershell.exe',  '-nologo' }
+  config.default_prog = { 'nu' }
 end
 
 return config
