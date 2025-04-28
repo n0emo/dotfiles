@@ -20,9 +20,12 @@
     ["wpaperd", "~/.config/wpaperd", true]
   ],
   "windows": [
-    ["wezterm", "~\\.config\\wezterm", true],
     ["nvim", "~\\AppData\\Local\\nvim", true],
+    ["wezterm", "~\\.config\\wezterm", true],
     ["Microsoft.PowerShell_profile.ps1", "~\\Documents\\WindowsPowerShell\\Microsoft.PowerShell_profile.ps1"],
-    ["nushell\\config.nu", "~\\AppData\\Roaming\\nushell\\config.nu"]
+    ["nushell\\config.nu", "~\\AppData\\Roaming\\nushell\\config.nu"],
+    [".gitconfig", "~\\.gitconfig"]
+  ],
+  "disabled": [
   ]
 }
