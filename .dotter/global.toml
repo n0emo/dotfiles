@@ -1,0 +1,40 @@
+[helpers]
+
+[git.files]
+".gitconfig" = "~/.gitconfig"
+
+[neovim.files]
+nvim = "~/.config/nvim"
+
+[wezterm.files]
+wezterm = "~/.config/wezterm"
+
+[kitty.files]
+kitty = "~/.config/kitty"
+
+[hyprland.files]
+hypr = "~/.config/hypr"
+rofi = "~/.config/rofi"
+waybar = "~/.config/waybar"
+wpaperd = "~/.config/wpaperd"
+
+[tmux.files]
+".tmux.conf" = "~/.tmux.conf"
+
+[fish.files]
+"fish/config.fish" = "~/.config/fish/config.fish"
+
+[nushell.files]
+nushell = "~/.config/nushell"
+
+[posh.files]
+"Microsoft.PowerShell_profile.ps1" = ""
+
+[terminal]
+depends = ["git", "neovim", "wezterm"]
+
+[default]
+depends = []
+
+[settings]
+default_target_type = "automatic"

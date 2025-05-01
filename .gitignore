@@ -1,2 +1,5 @@
 manifest.json
 .DS_Store
+.dotter/local.toml
+.dotter/cache.toml
+.dotter/cache
