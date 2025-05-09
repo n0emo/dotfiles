@@ -7,16 +7,7 @@ return {
   },
   config = function()
     local lspconfig = require("lspconfig")
-
-    local capabilities = require("cmp_nvim_lsp").default_capabilities()
-
-    require("mason-lspconfig").setup_handlers({
-      function(server_name)
-        lspconfig[server_name].setup({
-          capabilities = capabilities,
-        })
-      end,
-    })
+    require("mason-lspconfig").setup({})
 
     lspconfig.clangd.setup({
       auto_start = false,
