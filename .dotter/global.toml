@@ -30,6 +30,9 @@ nushell = "~/.config/nushell"
 [posh.files]
 "Microsoft.PowerShell_profile.ps1" = ""
 
+[zed.files]
+zed = { target = "~/.config/zed", type = "symbolic", recurse = false }
+
 [terminal]
 depends = ["git", "neovim", "wezterm"]
 
