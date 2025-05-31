@@ -51,4 +51,21 @@ if wezterm.target_triple == 'x86_64-pc-windows-msvc' then
   config.default_prog = { 'nu' }
 end
 
+wezterm.on("open-uri", function(window, pane, uri)
+  if os.getenv("KDE_FULL_SESSION") ~= "true" then
+    return true
+  end
+
+  local nuri, n = string.gsub(uri, "file://" .. wezterm.hostname(), "file://")
+  if n == 1 then
+    window:perform_action(
+      wezterm.action.SpawnCommandInNewWindow({
+        args = { "kioclient", "exec", nuri },
+      }),
+      pane
+    )
+    return false
+  end
+end)
+
 return config
