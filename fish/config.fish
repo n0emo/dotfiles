@@ -8,4 +8,15 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
     set -U fish_greeting
 
+    if type -q zoxide
+        zoxide init fish | source
+        alias cd=z
+    end
+
+    if type -q eza
+        alias ls="eza --icons --hyperlink --group-directories-first"
+        alias la="ls --long"
+    end
+
+    alias rg="rg --hyperlink-format=kitty"
 end
