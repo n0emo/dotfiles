@@ -19,4 +19,12 @@ if status is-interactive
     end
 
     alias rg="rg --hyperlink-format=kitty"
+
+    if type -q nvim
+        export EDITOR=nvim
+    end
+
+    if type -q zellij
+        eval (zellij setup --generate-auto-start fish | string collect)
+    end
 end
