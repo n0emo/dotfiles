@@ -49,6 +49,9 @@ return {
       TelescopeResultsBorder = { fg = theme.ui.bg_m1, bg = theme.ui.bg_m1 },
       TelescopePreviewNormal = { bg = theme.ui.bg_dim },
       TelescopePreviewBorder = { bg = theme.ui.bg_dim, fg = theme.ui.bg_dim },
+
+      -- LineNr = { fg = "#C0A36E", bg = "NONE" },
+      CursorLineNr = { fg = colors.palette.sakuraPink, bg = "NONE" },
     }
   end,
 }
