@@ -11,7 +11,5 @@ return {
         pattern = [[.*<((KEYWORDS)%(\(.{-1,}\))?):]]
       },
     })
-
-    vim.keymap.set("n", "<leader>ft", "<CMD>TodoTelescope<CR>")
   end,
 }
