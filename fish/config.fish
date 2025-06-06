@@ -15,7 +15,7 @@ if status is-interactive
 
     if type -q eza
         alias ls="eza --icons --hyperlink --group-directories-first"
-        alias la="ls --long"
+        alias la="ls --long --all"
     end
 
     alias rg="rg --hyperlink-format=kitty"
