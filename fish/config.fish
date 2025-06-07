@@ -23,8 +23,4 @@ if status is-interactive
     if type -q nvim
         export EDITOR=nvim
     end
-
-    if type -q zellij
-        eval (zellij setup --generate-auto-start fish | string collect)
-    end
 end
