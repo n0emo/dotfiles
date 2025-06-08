@@ -31,7 +31,7 @@ vim.keymap.set("n", "[d", vim.diagnostic.goto_prev)
 vim.keymap.set("n", "]d", vim.diagnostic.goto_next)
 
 vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float, { silent = true, noremap = true })
-vim.keymap.set("n", "<leader>ss", "<CMD>ClangdSwitchSourceHeader<CR>")
+vim.keymap.set("n", "<leader>ss", "<CMD>LspClangdSwitchSourceHeader<CR>")
 
 -- Telescope
 local telescope_builtin = require("telescope.builtin")
