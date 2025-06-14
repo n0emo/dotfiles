@@ -33,11 +33,38 @@ nushell = "~/.config/nushell"
 [zed.files]
 zed = { target = "~/.config/zed", type = "symbolic", recurse = false }
 
-[terminal]
-depends = ["git", "neovim", "wezterm"]
-
 [default]
 depends = []
+
+[macbook-air]
+depends = [
+    "fish",
+    "git",
+    "neovim",
+    "tmux",
+    "wezterm",
+    "zed",
+]
+
+[ryzenpc-linux]
+depends = [
+    "fish",
+    "git",
+    "hyprland",
+    "neovim",
+    "tmux",
+    "wezterm",
+    "zed",
+]
+
+[ryzenpc-windows]
+depends = [
+    "git",
+    "neovim",
+    "nushell",
+    "posh",
+    "wezterm",
+]
 
 [settings]
 default_target_type = "automatic"
