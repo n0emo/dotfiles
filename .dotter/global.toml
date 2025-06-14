@@ -5,6 +5,7 @@
 
 [neovim.files]
 nvim = "~/.config/nvim"
+"fish/conf.d/neovim.fish" = "~/.config/fish/conf.d/neovim.fish"
 
 [wezterm.files]
 wezterm = "~/.config/wezterm"
@@ -23,6 +24,7 @@ wpaperd = "~/.config/wpaperd"
 
 [fish.files]
 "fish/config.fish" = "~/.config/fish/config.fish"
+"fish/conf.d/0-profile.fish" = "~/.config/fish/conf.d/0-profile.fish"
 
 [nushell.files]
 nushell = "~/.config/nushell"
@@ -33,26 +35,78 @@ nushell = "~/.config/nushell"
 [zed.files]
 zed = { target = "~/.config/zed", type = "symbolic", recurse = false }
 
+[rustup.files]
+"fish/conf.d/0-rustup.fish" = "~/.config/fish/conf.d/0-rustup.fish"
+
+[flyctl.files]
+"fish/conf.d/flyctl.fish" = "~/.config/fish/conf.d/flyctl.fish"
+
+[eza.files]
+"fish/conf.d/eza.fish" = "~/.config/fish/conf.d/eza.fish"
+
+[fish-air.files]
+"fish/conf.d/0-air-profile.fish" = "~/.config/fish/conf.d/0-air-profile.fish" 
+
+[fnm.files]
+"fish/conf.d/fnm.fish" = "~/.config/fish/conf.d/fnm.fish"
+
+[go.files]
+"fish/conf.d/go.fish" = "~/.config/fish/conf.d/go.fish"
+
+[juliaup.files]
+"fish/conf.d/juliaup.fish" = "~/.config/fish/conf.d/juliaup.fish"
+
+[rg.files]
+"fish/conf.d/rg.fish" = "~/.config/fish/conf.d/rg.fish"
+
+[vcpkg.files]
+"fish/conf.d/vcpkg.fish" = "~/.config/fish/conf.d/vcpkg.fish"
+
+[xmake.files]
+"fish/conf.d/xmake.fish" = "~/.config/fish/conf.d/xmake.fish"
+
+[zoxide.files]
+"fish/conf.d/zoxide.fish" = "~/.config/fish/conf.d/zoxide.fish"
+
+[starship.files]
+"fish/conf.d/starship.fish" = "~/.config/fish/conf.d/starship.fish"
+starship = "~/.config/starship"
+
+[unix-cli]
+depends = [
+    "eza",
+    "fish",
+    "flyctl",
+    "fnm",
+    "git",
+    "go",
+    "juliaup",
+    "neovim",
+    "neovim",
+    "rg",
+    "rustup",
+    "starship",
+    "tmux",
+    "vcpkg",
+    "xmake",
+    "zoxide",
+]
+
 [default]
 depends = []
 
 [macbook-air]
 depends = [
-    "fish",
-    "git",
-    "neovim",
-    "tmux",
+    "fish-air",
+    "unix-cli",
     "wezterm",
     "zed",
 ]
 
 [ryzenpc-linux]
 depends = [
-    "fish",
-    "git",
     "hyprland",
-    "neovim",
-    "tmux",
+    "unix-cli",
     "wezterm",
     "zed",
 ]

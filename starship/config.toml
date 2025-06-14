@@ -1,0 +1,17 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+add_newline = false
+
+[hostname]
+ssh_only = false
+format = '[$ssh_symbol](bold blue)@[$hostname](white) '
+disabled = false
+aliases = { "Alberts-MacBook-Air" = "air" }
+
+[username]
+style_user = 'green bold'
+style_root = 'root bold'
+format = '[$user]($style)'
+disabled = false
+show_always = true
+
