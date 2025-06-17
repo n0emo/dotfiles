@@ -19,6 +19,10 @@ rofi = "~/.config/rofi"
 waybar = "~/.config/waybar"
 wpaperd = "~/.config/wpaperd"
 
+[yabai.files]
+yabai = "~/.config/yabai"
+skhd = "~/.config/skhd"
+
 [tmux.files]
 ".tmux.conf" = "~/.tmux.conf"
 
@@ -100,6 +104,7 @@ depends = [
     "fish-air",
     "unix-cli",
     "wezterm",
+    "yabai",
     "zed",
 ]
 
