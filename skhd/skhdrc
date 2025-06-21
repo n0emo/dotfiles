@@ -26,3 +26,4 @@ alt - h : yabai -m window --swap west
 alt - l : yabai -m window --swap east
 
 alt - e : open ~
+alt - c : yabai -m window --close
