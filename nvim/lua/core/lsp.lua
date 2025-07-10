@@ -1,8 +1,11 @@
 vim.lsp.enable({
-  "rust_analyzer",
+  "clangd",
+  "html",
+  "jinja_lsp",
   "lua_ls",
   "pylsp",
-  "jinja_lsp",
-  "html",
-  "clangd",
+  "rust_analyzer",
+  "svelte",
+  "tailwindcss",
+  "ts_ls",
 })

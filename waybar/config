@@ -1,3 +1,4 @@
+// vim: ft=jsonc :
 {
     "layer": "top", // Waybar at top layer
     "height": 30, // Waybar height (to be removed for auto height)
@@ -7,9 +8,9 @@
     "margin-right": 10,
     "margin-bottom": 0,
 
-    "modules-left": ["hyprland/workspaces", "sway/workspaces", "mpris"],
+    "modules-left": ["hyprland/workspaces", "niri/workspaces", "sway/workspaces", "mpris"],
     "modules-center": ["clock"],
-    "modules-right": ["sway/mode", "hyprland/language", "sway/language", "keyboard-state", "wireplumber", "network", "tray"],
+    "modules-right": ["sway/mode", "hyprland/language", "niri/language", "sway/language", "keyboard-state", "wireplumber", "network", "tray"],
 
     // Modules configuration
     "sway/mode": {
@@ -24,10 +25,15 @@
         "all-outputs": true,
         "format": "{icon}",
         "format-icons": {
-         "urgent": "",
-         "active": "",
-         "default": "",
+            "urgent": "",
+            "active": "",
+            "default": "",
         }
+    },
+
+    "niri/workspaces": {
+        "format": "{value}",
+        "current-only": true,
     },
 
     "sway/workspaces": {
@@ -107,12 +113,12 @@
     },
 
     "mpris": {
-	    "format": "{status_icon} ❘ {dynamic}",
-	    "dynamic-len": 60,
-	    "status-icons": {
-		    "default": "",
-		    "paused": ""
-	    },
+        "format": "{status_icon} ❘ {dynamic}",
+        "dynamic-len": 60,
+        "status-icons": {
+            "default": "",
+            "paused": ""
+        },
     },
 }
 

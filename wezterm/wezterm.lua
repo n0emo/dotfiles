@@ -2,8 +2,6 @@ local wezterm = require 'wezterm'
 
 local config = wezterm.config_builder()
 
-config.front_end = "WebGpu"
-
 config.color_scheme = 'Kanagawa (Gogh)'
 config.window_background_opacity = 0.9
 config.win32_system_backdrop = "Disable"
