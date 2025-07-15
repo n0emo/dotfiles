@@ -13,11 +13,26 @@ wezterm = "~/.config/wezterm"
 [kitty.files]
 kitty = "~/.config/kitty"
 
+[rofi.files]
+rofi = "~/.config/rofi"
+
+[waybar.files]
+waybar = "~/.config/waybar"
+
+[wpaperd.files]
+wpaperd = "~/.config/wpaperd"
+
+[hyprland]
+depends = ["rofi", "waybar", "wpaperd"]
+
 [hyprland.files]
 hypr = "~/.config/hypr"
-rofi = "~/.config/rofi"
-waybar = "~/.config/waybar"
-wpaperd = "~/.config/wpaperd"
+
+[niri]
+depends = ["rofi", "waybar", "wpaperd"]
+
+[niri.files]
+niri = "~/.config/niri"
 
 [yabai.files]
 yabai = "~/.config/yabai"
@@ -110,7 +125,7 @@ depends = [
 
 [ryzenpc-linux]
 depends = [
-    "hyprland",
+    "niri",
     "unix-cli",
     "wezterm",
     "zed",
