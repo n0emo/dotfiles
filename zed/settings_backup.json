@@ -10,23 +10,21 @@
   "vim_mode": true,
   "ui_font_size": 16,
   "buffer_font_size": 16,
-  "relative_line_numbers": true,
   "theme": {
     "mode": "system",
     "light": "One Light",
-    "dark": "One Dark"
+    "dark": "Kanagawa Wave"
+  },
+  "features": {
+    // Which inline completion provider to use.
+    "edit_completion_provider": "none",
+    "inline_completion_provider": "none",
+    "inline_completions": "none",
+    "show_inline_completions": "none"
   },
   "assistant": {
     "enabled": false,
-    "button": false,
     "version": "2"
-  },
-  "features": {
-    "edit_prediction_provider": "none",
-    "copilot": false
-  },
-  "chat_panel": {
-    "button": "never"
   },
   "buffer_font_family": "JetBrains Mono NL",
   "format_on_save": "off",
