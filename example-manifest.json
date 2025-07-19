@@ -1,8 +1,0 @@
-{
-  "tags": ["common", "linux"],
-  "sources": [
-    {
-      "file": "links.json"
-    }
-  ]
-}
