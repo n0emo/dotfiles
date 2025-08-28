@@ -1,8 +1,21 @@
 local wezterm = require 'wezterm'
 
+local function get_appearance()
+  if wezterm.gui then
+    return wezterm.gui.get_appearance()
+  end
+  return 'Dark'
+end
+
+
 local config = wezterm.config_builder()
 
-config.color_scheme = 'Kanagawa (Gogh)'
+if get_appearance():find 'Dark' then
+  config.color_scheme = 'Kanagawa (Gogh)'
+else
+  config.color_scheme = 'Catppuccin Latte'
+end
+
 config.window_background_opacity = 0.9
 config.win32_system_backdrop = "Disable"
 
