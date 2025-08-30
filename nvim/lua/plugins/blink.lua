@@ -2,12 +2,15 @@ return {
   'saghen/blink.cmp',
   dependencies = { 'rafamadriz/friendly-snippets' },
   version = '1.*',
+
+  build = "cargo build --release",
+
   opts = {
     keymap = {
       preset = 'none',
       ['<C-k>'] = { 'select_prev', 'fallback_to_mappings' },
       ['<C-j>'] = { 'select_next', 'fallback_to_mappings' },
-      ['<C-space>'] = { 'show', 'show_documentation', 'hide_documentation' },
+      ['<C-o>'] = { 'show', 'show_documentation', 'hide_documentation' },
       ['<CR>'] = { 'accept', 'fallback' },
       ['<C-e>'] = { 'hide' },
       ['<Tab>'] = { 'snippet_forward', 'fallback' },
