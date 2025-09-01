@@ -40,10 +40,28 @@ vim.opt.cursorline = true
 
 vim.opt.hlsearch = true
 
-vim.opt.signcolumn = 'yes'
+vim.opt.signcolumn = "yes"
 
 vim.opt.wrap = true
 
 --vim.opt.foldmethod = "expr"
 --vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
 --vim.opt.foldlevelstart = 99
+
+vim.opt.clipboard = "unnamedplus"
+
+local desktop = os.getenv("XDG_CURRENT_DESKTOP")
+if desktop and desktop:find("GNOME") then
+  vim.g.clipboard = {
+    name = "xclip",
+    copy = {
+      ["+"] = "xclip -selection clipboard",
+      ["*"] = "xclip -selection primary",
+    },
+    paste = {
+      ["+"] = { "xclip", "-selection", "clipboard", "-o" },
+      ["*"] = { "xclip", "-selection", "primary", "-o" },
+    },
+    cache_enabled = true,
+  }
+end
