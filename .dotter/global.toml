@@ -87,6 +87,10 @@ zed = { target = "~/.config/zed", type = "symbolic", recurse = false }
 [zoxide.files]
 "fish/conf.d/zoxide.fish" = "~/.config/fish/conf.d/zoxide.fish"
 
+[yazi.files]
+yazi = "~/.config/yazi"
+"fish/conf.d/yazi.fish" = "~/.config/fish/conf.d/yazi.fish"
+
 [starship.files]
 "fish/conf.d/starship.fish" = "~/.config/fish/conf.d/starship.fish"
 starship = "~/.config/starship"
@@ -108,6 +112,7 @@ depends = [
     "tmux",
     "vcpkg",
     "xmake",
+    "yazi",
     "zoxide",
 ]
 

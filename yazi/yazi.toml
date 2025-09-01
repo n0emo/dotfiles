@@ -1,0 +1,6 @@
+[preview]
+max_width = 1280
+max_height = 720
+
+[tasks]
+image_bound = [0, 0]
