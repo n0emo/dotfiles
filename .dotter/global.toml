@@ -51,8 +51,8 @@ nushell = "~/.config/nushell"
 [posh.files]
 "Microsoft.PowerShell_profile.ps1" = ""
 
-[zed.files]
-zed = { target = "~/.config/zed", type = "symbolic", recurse = false }
+[colima.files]
+"fish/conf.d/colima.fish" = "~/.config/fish/conf.d/colima.fish"
 
 [rustup.files]
 "fish/conf.d/0-rustup.fish" = "~/.config/fish/conf.d/0-rustup.fish"
@@ -121,11 +121,11 @@ depends = []
 
 [macbook-air]
 depends = [
+    "colima",
     "fish-air",
     "unix-cli",
     "wezterm",
     "yabai",
-    "zed",
 ]
 
 [ryzenpc-linux]
@@ -133,7 +133,6 @@ depends = [
     "niri",
     "unix-cli",
     "wezterm",
-    "zed",
 ]
 
 [ryzenpc-windows]
