@@ -21,7 +21,6 @@ vim.opt.splitright = true
 vim.opt.smartcase = true
 vim.opt.ignorecase = true
 
-vim.opt.wrap = false
 vim.opt.smartindent = true
 vim.opt.breakindent = true
 vim.opt.termguicolors = true
@@ -32,7 +31,7 @@ vim.opt.swapfile = false
 vim.opt.updatetime = 250
 
 vim.opt.list = true
-vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
+-- vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
 vim.opt.listchars = { tab = "  ", trail = "·", nbsp = "␣" }
 
 vim.opt.inccommand = "split"
@@ -43,12 +42,6 @@ vim.opt.hlsearch = true
 vim.opt.signcolumn = "yes"
 
 vim.opt.wrap = true
-
---vim.opt.foldmethod = "expr"
---vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
---vim.opt.foldlevelstart = 99
-
-vim.opt.clipboard = "unnamedplus"
 
 local desktop = os.getenv("XDG_CURRENT_DESKTOP")
 if desktop and desktop:find("GNOME") then
