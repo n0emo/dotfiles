@@ -121,7 +121,6 @@ depends = []
 
 [macbook-air]
 depends = [
-    "colima",
     "fish-air",
     "unix-cli",
     "wezterm",
