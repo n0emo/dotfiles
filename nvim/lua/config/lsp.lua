@@ -14,3 +14,14 @@ vim.lsp.enable({
 vim.lsp.config("clangd", {
   cmd = { "clangd", "--header-insertion=never", "--experimental-modules-support" },
 })
+
+vim.lsp.config("rust_analyzer", {
+  settings = {
+    ["rust-analyzer"] = {
+      cargo = {
+        allFeatures = true,
+      },
+    },
+  },
+}
+)
