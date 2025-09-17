@@ -8,6 +8,9 @@ return {
       options = {
         theme = "kanagawa",
       },
+      sections = {
+        lualine_b = { "grapple" },
+      },
     })
   end,
 }

@@ -66,3 +66,11 @@ end)
 local ufo = require("ufo")
 vim.keymap.set('n', 'zR', ufo.openAllFolds)
 vim.keymap.set('n', 'zM', ufo.closeAllFolds)
+
+-- Grapple
+vim.keymap.set("n", "m", require("grapple").toggle)
+vim.keymap.set("n", "M", "<CMD>Telescope grapple tags<CR>")
+
+for i = 1, 9 do
+  vim.keymap.set("n", "<leader>" .. i, "<CMD>Grapple select index=" .. i .. "<CR>")
+end
