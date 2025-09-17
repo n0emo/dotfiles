@@ -25,3 +25,19 @@ vim.lsp.config("rust_analyzer", {
   },
 }
 )
+
+vim.lsp.config("tailwindcss", {
+  settings = {
+    tailwindCSS = {
+      experimental = {
+        classRegex = {
+          'class: "(.*)"',
+        },
+      },
+      includeLanguages = {
+        rust = "html",
+      },
+    },
+  },
+  filetypes = { "rust" },
+})
