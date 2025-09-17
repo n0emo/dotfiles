@@ -1,6 +1,5 @@
 return {
   "neovim/nvim-lspconfig",
-  lazy=false,
-  config = function()
-  end
+  lazy = false,
+  config = function(_, opts) end,
 }
