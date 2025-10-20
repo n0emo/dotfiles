@@ -105,7 +105,6 @@ depends = [
     "go",
     "juliaup",
     "neovim",
-    "neovim",
     "rg",
     "rustup",
     "starship",
