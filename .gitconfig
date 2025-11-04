@@ -5,6 +5,7 @@
 [alias]
     st = status
     co = commit
+    unco = reset --soft HEAD~1
     ch = checkout
     br = branch
     unstage = reset HEAD --

@@ -3,6 +3,7 @@ vim.lsp.enable({
   "gopls",
   "html",
   "jinja_lsp",
+  "just",
   "lua_ls",
   "pylsp",
   "rust_analyzer",
