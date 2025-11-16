@@ -1,0 +1,52 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "terminal": {
+    "shell": "system"
+  },
+  "vim_mode": true,
+  "disable_ai": true,
+  "base_keymap": "VSCode",
+  "icon_theme": "Material Icon Theme",
+  "format_on_save": "off",
+  "ui_font_size": 16,
+  "buffer_font_size": 15,
+  "theme": {
+    "mode": "system",
+    "light": "One Light",
+    "dark": "Kanagawa Wave"
+  },
+  "theme_overrides": {
+    "Kanagawa Wave": {
+      "renamed.background": "#FFFFFF20",
+      "search.match_background": "#FFFFFF20",
+      "ghost_element.background": "#00000010",
+      "ghost_element.hover": "#00000099",
+      "background.appearance": "transparent",
+      "background": "#16161DD8",
+      "editor.background": "#00000010",
+      "editor.gutter.background": "#00000010",
+      "title_bar.background": "#000000DF",
+      "toolbar.background": "#00000010",
+      "terminal.background": "#00000000",
+      "status_bar.background": "#000000DF",
+      "tab.active_background": "#000000",
+      "tab.inactive_background": "#00000000",
+      "tab_bar.background": "#00000010",
+      "panel.background": "#00000010",
+      "border": "#00000000",
+      "border.variant": "#00000000",
+      "scrollbar.track.border": "#00000000",
+      "scrollbar.track.background": "#00000000",
+      "scrollbar.thumb.background": "#00000000",
+      "scrollbar.thumb.border": "#FFFFFF90",
+      "editor.active_line.background": "#00000000"
+    }
+  }
+}

@@ -95,6 +95,10 @@ yazi = "~/.config/yazi"
 "fish/conf.d/starship.fish" = "~/.config/fish/conf.d/starship.fish"
 starship = "~/.config/starship"
 
+[zed.files]
+"zed/settings.json" = "~/.config/zed/settings.json"
+"zed/keymap.json" = "~/.config/zed/keymap.json"
+
 [unix-cli]
 depends = [
     "eza",
@@ -124,6 +128,7 @@ depends = [
     "unix-cli",
     "wezterm",
     "yabai",
+    "zed",
 ]
 
 [ryzenpc-linux]
@@ -131,6 +136,7 @@ depends = [
     "niri",
     "unix-cli",
     "wezterm",
+    "zed",
 ]
 
 [ryzenpc-windows]
