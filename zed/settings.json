@@ -7,22 +7,17 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
-  "relative_line_numbers": true,
+  "relative_line_numbers": "enabled",
   "terminal": {
     "shell": "system"
   },
   "vim_mode": true,
   "disable_ai": true,
   "base_keymap": "VSCode",
-  "icon_theme": "Material Icon Theme",
   "format_on_save": "off",
   "ui_font_size": 16,
   "buffer_font_size": 15,
-  "theme": {
-    "mode": "system",
-    "light": "One Light",
-    "dark": "Kanagawa Wave"
-  },
+  "theme": "Kanagawa Wave",
   "theme_overrides": {
     "Kanagawa Wave": {
       "renamed.background": "#FFFFFF20",
