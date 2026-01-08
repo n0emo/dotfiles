@@ -87,6 +87,9 @@ nushell = "~/.config/nushell"
 [zoxide.files]
 "fish/conf.d/zoxide.fish" = "~/.config/fish/conf.d/zoxide.fish"
 
+[ghcup.files]
+"fish/conf.d/ghcup.fish" = "~/.config/fish/conf.d/ghcup.fish"
+
 [yazi.files]
 yazi = "~/.config/yazi"
 "fish/conf.d/yazi.fish" = "~/.config/fish/conf.d/yazi.fish"
@@ -105,6 +108,7 @@ depends = [
     "fish",
     "flyctl",
     "fnm",
+    "ghcup",
     "git",
     "go",
     "juliaup",
@@ -131,7 +135,7 @@ depends = [
     "zed",
 ]
 
-[ryzenpc-linux]
+[einstein-linux]
 depends = [
     "niri",
     "unix-cli",
