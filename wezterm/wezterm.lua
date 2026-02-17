@@ -16,7 +16,7 @@ else
   config.color_scheme = 'Catppuccin Latte'
 end
 
-config.window_background_opacity = 0.9
+config.window_background_opacity = 0.95
 config.win32_system_backdrop = "Disable"
 
 config.tab_bar_at_bottom = true
