@@ -102,6 +102,9 @@ starship = "~/.config/starship"
 "zed/settings.json" = "~/.config/zed/settings.json"
 "zed/keymap.json" = "~/.config/zed/keymap.json"
 
+[global-justfile.files]
+"global.just" = "~/justfile"
+
 [unix-cli]
 depends = [
     "eza",
@@ -141,6 +144,7 @@ depends = [
     "unix-cli",
     "wezterm",
     "zed",
+    "global-justfile",
 ]
 
 [ryzenpc-windows]

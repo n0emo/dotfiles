@@ -1,0 +1,2 @@
+deploy:
+    dotter deploy
