@@ -32,10 +32,6 @@ return {
       }
     },
 
-    menu = {
-      border = "rounded",
-    },
-
     snippets = {
       preset = "luasnip",
     },
