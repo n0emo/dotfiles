@@ -97,6 +97,7 @@ function install_plugins()
     "https://github.com/stevearc/conform.nvim",
     "https://github.com/nvim-lualine/lualine.nvim",
     "https://github.com/norcalli/nvim-colorizer.lua",
+    "https://github.com/johmsalas/text-case.nvim",
   })
 
   vim.cmd.colorscheme("kanagawa")
@@ -240,6 +241,9 @@ function install_plugins()
   }, {
     names = false,
   })
+
+  require("textcase").setup({})
+  require("telescope").load_extension("textcase")
 end
 
 function configure_lsp()
@@ -354,6 +358,8 @@ function set_keymap()
   vim.keymap.set("n", "<leader>?", function()
     require("which-key").show({ global = false })
   end, { desc = "Buffer Local Keymaps (which-key)" })
+
+  vim.keymap.set("n", "ga.", "<cmd>TextCaseOpenTelescope<CR>")
 end
 
 function highlight_yanked_text()
