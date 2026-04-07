@@ -88,7 +88,7 @@ function install_plugins()
     "https://github.com/folke/which-key.nvim",
     "https://github.com/nvim-telescope/telescope.nvim",
     "https://github.com/folke/todo-comments.nvim",
-    { src = "https://github.com/nvim-treesitter/nvim-treesitter", version = "master" },
+    "https://github.com/nvim-treesitter/nvim-treesitter",
     "https://github.com/kevinhwang91/nvim-ufo",
     "https://github.com/neovim/nvim-lspconfig",
     "https://github.com/chrisgrieser/nvim-lsp-endhints",
@@ -96,7 +96,7 @@ function install_plugins()
     { src = "https://github.com/saghen/blink.cmp", version = vim.version.range("1") },
     "https://github.com/stevearc/conform.nvim",
     "https://github.com/nvim-lualine/lualine.nvim",
-    "https://github.com/norcalli/nvim-colorizer.lua",
+    "https://github.com/catgoose/nvim-colorizer.lua",
     "https://github.com/johmsalas/text-case.nvim",
   })
 
@@ -140,6 +140,8 @@ function install_plugins()
       pattern = [[.*<((KEYWORDS)%(\(.{-1,}\))?):]],
     },
   })
+
+  setup_treesitter()
 
   vim.o.foldcolumn = "0"
   vim.o.foldlevel = 99 -- Using ufo provider need a large value, feel free to decrease the value
@@ -370,6 +372,60 @@ function highlight_yanked_text()
       vim.highlight.on_yank()
     end,
   })
+end
+
+function setup_treesitter()
+  local treesitter = require("nvim-treesitter")
+
+  vim.api.nvim_create_autocmd("PackChanged", {
+    callback = function(ev)
+      local name, kind = ev.data.spec.name, ev.data.kind
+      if name == "nvim-treesitter" and kind == "update" then
+        if not ev.data.active then
+          vim.cmd.packadd("nvim-treesitter")
+        end
+        vim.cmd("TSUpdate")
+      end
+    end,
+  })
+
+  treesitter.setup()
+
+  local ensureInstalled = {
+    "c",
+    "c_sharp",
+    "cpp",
+    "gleam",
+    "go",
+    "haskell",
+    "javascript",
+    "lua",
+    "python",
+    "rust",
+    "svelte",
+    "typescript",
+  }
+
+  local alreadyInstalled = require("nvim-treesitter.config").get_installed()
+  local parsersToInstall = vim
+    .iter(ensureInstalled)
+    :filter(function(parser)
+      return not vim.tbl_contains(alreadyInstalled, parser)
+    end)
+    :totable()
+
+  treesitter.install(parsersToInstall)
+
+  vim.api.nvim_create_autocmd("FileType", {
+    callback = function()
+      -- Enable treesitter highlighting and disable regex syntax
+      pcall(vim.treesitter.start)
+      -- Enable treesitter-based indentation
+      vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+    end,
+  })
+
+  treesitter.update()
 end
 
 main()
