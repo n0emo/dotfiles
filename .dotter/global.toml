@@ -81,8 +81,9 @@ nushell = "~/.config/nushell"
 [vcpkg.files]
 "fish/conf.d/vcpkg.fish" = "~/.config/fish/conf.d/vcpkg.fish"
 
-[clang-format.files]
-".clang-format" = "~/.clang-format"
+[clang.files]
+"clang/.clang-format" = "~/.clang-format"
+"clang/.clangd" = "~/.clangd"
 
 [xmake.files]
 "fish/conf.d/xmake.fish" = "~/.config/fish/conf.d/xmake.fish"
@@ -134,7 +135,7 @@ depends = []
 
 [macbook-air]
 depends = [
-    "clang-format",
+    "clang",
     "fish-air",
     "unix-cli",
     "wezterm",
@@ -144,7 +145,7 @@ depends = [
 
 [einstein-linux]
 depends = [
-    "clang-format",
+    "clang",
     "global-justfile",
     "niri",
     "unix-cli",
@@ -154,7 +155,7 @@ depends = [
 
 [ryzenpc-windows]
 depends = [
-    "clang-format",
+    "clang",
     "git",
     "neovim",
     "nushell",
