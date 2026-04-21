@@ -302,7 +302,7 @@ function set_keymap()
   vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
 
   -- LSP
-  vim.keymap.set("i", "<C-o>", "<C-x><C-n>", { noremap = true })
+  vim.keymap.set("n", "gd", vim.lsp.buf.definition, { desc = "LSP: Go to definition" })
 
   vim.keymap.set("n", "<leader>td", function()
     vim.diagnostic.enable(not vim.diagnostic.is_enabled())
