@@ -8,5 +8,6 @@ CompileFlags:
 
 Diagnostics:
   ClangTidy:
-    Add: modernize*
+    Add: ["modernize*", "bugprone*", "cppcoreguidelines*"]
+
 ---
