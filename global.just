@@ -6,12 +6,13 @@ list:
 
 migrate-directories out: \
     (migrate-single-directory "Pictures" out) \
-    (migrate-single-directory "Music" out) \
     (migrate-single-directory "Downloads" out) \
     (migrate-single-directory "Code" out) \
     (migrate-single-directory "Videos" out) \
     (migrate-single-directory "Faugus" out) \
     (migrate-single-directory "Games" out)
+
+# (migrate-single-directory "Music" out) \
 
 migrate-single-directory dir out:
     #!/usr/bin/env bash
