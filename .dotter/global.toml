@@ -146,7 +146,6 @@ depends = [
 [einstein-linux]
 depends = [
     "clang",
-    "global-justfile",
     "niri",
     "unix-cli",
     "wezterm",
