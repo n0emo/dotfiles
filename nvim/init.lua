@@ -275,6 +275,7 @@ end
 function configure_lsp()
   vim.lsp.enable({
     "clangd",
+    "csharp_ls",
     "gopls",
     "html",
     "jinja_lsp",
