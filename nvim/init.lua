@@ -219,6 +219,7 @@ function install_plugins()
       python = { "isort", "black" },
       javascript = { "prettierd", "prettier", stop_after_first = true },
       cpp = { "clang-format" },
+      nim = { "nimpretty" },
     },
     default_format_opts = {
       lsp_format = "fallback",
@@ -281,6 +282,7 @@ function configure_lsp()
     "jinja_lsp",
     "just",
     "lua_ls",
+    "nim_langserver",
     "ols",
     "pyright",
     "rust_analyzer",
