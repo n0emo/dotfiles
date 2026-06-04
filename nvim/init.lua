@@ -220,10 +220,20 @@ function install_plugins()
       javascript = { "prettierd", "prettier", stop_after_first = true },
       cpp = { "clang-format" },
       nim = { "nimpretty" },
+      typst = { "typstyle" },
     },
+
+    formatters = {
+      typstyle = {
+        command = "typstyle",
+        append_args = { "--line-width", "100", "--wrap-text" },
+      },
+    },
+
     default_format_opts = {
       lsp_format = "fallback",
     },
+
     format_on_save = function(bufnr)
       -- Disable with a global or buffer-local variable
       if vim.g.disable_autoformat or vim.b[bufnr].disable_autoformat then
