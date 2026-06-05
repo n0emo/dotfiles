@@ -5,6 +5,7 @@ local function main()
   install_plugins()
   configure_lsp()
   set_keymap()
+  set_langmap()
   highlight_yanked_text()
 end
 
@@ -445,6 +446,8 @@ function setup_treesitter()
     "typescript",
   }
 
+  local noIndent = { "cs", "c_sharp" }
+
   local alreadyInstalled = require("nvim-treesitter.config").get_installed()
   local parsersToInstall = vim
     .iter(ensureInstalled)
@@ -456,15 +459,99 @@ function setup_treesitter()
   treesitter.install(parsersToInstall)
 
   vim.api.nvim_create_autocmd("FileType", {
-    callback = function()
+    callback = function(ctx)
       -- Enable treesitter highlighting and disable regex syntax
       pcall(vim.treesitter.start)
-      -- Enable treesitter-based indentation
-      vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+      if not vim.list_contains(noIndent, ctx.match) then
+        -- Enable treesitter-based indentation
+        vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+      end
     end,
   })
 
   treesitter.update()
 end
+
+function set_langmap()
+  local letters = {
+    { "й", "q" },
+    { "ц", "w" },
+    { "у", "e" },
+    { "к", "r" },
+    { "е", "t" },
+    { "н", "y" },
+    { "г", "u" },
+    { "ш", "i" },
+    { "щ", "o" },
+    { "з", "p" },
+    { "ф", "a" },
+    { "ы", "s" },
+    { "в", "d" },
+    { "а", "f" },
+    { "п", "g" },
+    { "р", "h" },
+    { "о", "j" },
+    { "л", "k" },
+    { "д", "l" },
+    { "я", "z" },
+    { "ч", "x" },
+    { "с", "c" },
+    { "м", "v" },
+    { "и", "b" },
+    { "т", "n" },
+    { "ь", "m" },
+
+    { "Й", "Q" },
+    { "Ц", "W" },
+    { "У", "E" },
+    { "К", "R" },
+    { "Е", "T" },
+    { "Н", "Y" },
+    { "Г", "U" },
+    { "Ш", "I" },
+    { "Щ", "O" },
+    { "З", "P" },
+    { "Ф", "A" },
+    { "Ы", "S" },
+    { "В", "D" },
+    { "А", "F" },
+    { "П", "G" },
+    { "Р", "H" },
+    { "О", "J" },
+    { "Л", "K" },
+    { "Д", "L" },
+    { "Я", "Z" },
+    { "Ч", "X" },
+    { "С", "C" },
+    { "М", "V" },
+    { "И", "B" },
+    { "Т", "N" },
+    { "Ь", "M" },
+
+    { "х", "\\[" },
+    { "Х", "\\{" },
+    { "ъ", "\\]" },
+    { "Ъ", "\\}" },
+    { "ж", "\\;" },
+    { "Ж", "\\:" },
+    { "э", "\\'" },
+    { "Э", '\\"' },
+    { "б", "\\," },
+    { "Б", "\\<" },
+    { "ю", "\\." },
+    { "Ю", "\\>" },
+    { "ё", "\\`" },
+    { "Ё", "\\~" },
+  }
+
+  local parts = {}
+  for _, pair in ipairs(letters) do
+    table.insert(parts, pair[1] .. pair[2])
+  end
+
+  vim.opt.langmap = table.concat(parts, ",")
+end
+
+set_langmap()
 
 main()
