@@ -552,6 +552,4 @@ function set_langmap()
   vim.opt.langmap = table.concat(parts, ",")
 end
 
-set_langmap()
-
 main()
