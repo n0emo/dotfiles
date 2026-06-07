@@ -184,7 +184,16 @@ function install_plugins()
       ["<C-o>"] = { "show", "show_documentation", "hide_documentation" },
       ["<CR>"] = { "accept", "fallback" },
       ["<C-e>"] = { "hide" },
-      ["<Tab>"] = { "snippet_forward", "fallback" },
+      ["<Tab>"] = {
+        function(cmp)
+          local ls = require("luasnip")
+          if ls.locally_jumpable(1) then
+            return cmp.snippet_forward()
+          end
+        end,
+        "select_and_accept",
+        "fallback",
+      },
       ["<S-Tab>"] = { "snippet_backward", "fallback" },
     },
 
