@@ -106,6 +106,10 @@ starship = "~/.config/starship"
 "zed/settings.json" = "~/.config/zed/settings.json"
 "zed/keymap.json" = "~/.config/zed/keymap.json"
 
+[codium.files]
+"codium/settings.json" = "~/.config/VSCodium/User/settings.json"
+"codium/keybindings.json" = "~/.config/VSCodium/User/keybindings.json"
+
 [global-justfile.files]
 "global.just" = "~/justfile"
 
@@ -136,6 +140,7 @@ depends = []
 [macbook-air]
 depends = [
     "clang",
+    "codium",
     "fish-air",
     "unix-cli",
     "wezterm",
@@ -146,6 +151,7 @@ depends = [
 [einstein-linux]
 depends = [
     "clang",
+    "codium",
     "niri",
     "unix-cli",
     "wezterm",
@@ -155,6 +161,7 @@ depends = [
 [ryzenpc-windows]
 depends = [
     "clang",
+    "codium",
     "git",
     "neovim",
     "nushell",

@@ -1,0 +1,227 @@
+{
+    // Basic settings
+    "editor.codeLens": false,
+    "editor.fontFamily": "'JetBrainsMono', 'monospace', monospace",
+    "editor.indentSize": 4,
+    "editor.inlayHints.enabled": "offUnlessPressed",
+    "editor.lineNumbers": "relative",
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
+    "explorer.confirmPasteNative": false,
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
+    "window.restoreWindows": "none",
+    "editor.unicodeHighlight.allowedLocales": {
+        "ru": true
+    },
+    "terminal.integrated.gpuAcceleration": "off",
+    //
+    // Vim mode
+    "vim.useSystemClipboard": true,
+    "vim.highlightedyank.enable": true,
+    "vim.highlightedyank.color": "rgba(255, 129, 63, 0.8)",
+    "vim.highlightedyank.duration": 150,
+    "vim.insertModeKeyBindings": [
+        {
+            "before": [
+                "<C-o>"
+            ],
+            "commands": [
+                "editor.action.triggerSuggest"
+            ]
+        }
+    ],
+    "vim.normalModeKeyBindings": [
+        {
+            "before": [
+                "K"
+            ],
+            "commands": [
+                "editor.action.showDefinitionPreviewHover"
+            ]
+        },
+        {
+            "before": [
+                "g",
+                "."
+            ],
+            "commands": [
+                "editor.action.quickFix"
+            ]
+        },
+        {
+            "before": [
+                "-"
+            ],
+            "commands": [
+                "oil-code.open"
+            ],
+            "recursive": true
+        },
+        {
+            "before": [
+                "\n"
+            ],
+            "commands": [
+                "oil-code.select"
+            ],
+            "recursive": true
+        },
+        {
+            "before": [
+                "-"
+            ],
+            "commands": [
+                {
+                    "command": "oil-code.open"
+                }
+            ]
+        },
+        {
+            "before": [
+                "<cr>"
+            ],
+            "commands": [
+                {
+                    "command": "oil-code.select"
+                }
+            ]
+        },
+        {
+            "before": [
+                "<c-l>"
+            ],
+            "commands": [
+                {
+                    "command": "oil-code.refresh"
+                }
+            ]
+        },
+        {
+            "before": [
+                "`"
+            ],
+            "commands": [
+                {
+                    "command": "oil-code.cd"
+                }
+            ]
+        }
+    ],
+    "vim.visualModeKeyBindings": [
+        {
+            "before": [
+                "K"
+            ],
+            "commands": [
+                "editor.action.moveLinesUpAction"
+            ]
+        },
+        {
+            "before": [
+                "J"
+            ],
+            "commands": [
+                "editor.action.moveLinesDownAction"
+            ]
+        }
+    ],
+    //
+    // Disable AI staff
+    "chat.agent.enabled": false,
+    "chat.disableAIFeatures": true,
+    "notebook.experimental.generate": false,
+    "terminal.integrated.initialHint": false,
+    "workbench.settings.showAISearchToggle": false,
+    "terminal.integrated.suggest.inlineSuggestion": "off",
+    //
+    // Disable telemetry
+    "telemetry.feedback.enabled": false,
+    //
+    // Git
+    "git.autofetch": true,
+    "git.confirmSync": false,
+    "git.openRepositoryInParentFolders": "always",
+    //
+    // Languages
+    "clangd.arguments": [
+        "--header-insertion=never"
+    ],
+    "[python]": {
+        "editor.defaultFormatter": "charliermarsh.ruff"
+    },
+    "[markdown]": {
+        "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
+    },
+    //
+    // UI adjustments
+    "breadcrumbs.enabled": false,
+    "editor.cursorBlinking": "solid",
+    "editor.cursorSmoothCaretAnimation": "off",
+    "editor.guides.indentation": false,
+    "editor.hideCursorInOverviewRuler": true,
+    "editor.minimap.enabled": false,
+    "editor.overviewRulerBorder": false,
+    "editor.renderLineHighlight": "none",
+    "editor.rulers": [
+        80,
+        120
+    ],
+    "editor.scrollbar.horizontal": "auto",
+    "editor.scrollbar.vertical": "visible",
+    "explorer.openEditors.visible": 1,
+    "window.commandCenter": false,
+    "window.title": "${activeEditorShort}${separator}${rootName}${separator}${profileName}",
+    "window.titleBarStyle": "custom",
+    "workbench.activityBar.location": "top",
+    "workbench.layoutControl.enabled": true,
+    "workbench.navigationControl.enabled": false,
+    "workbench.sideBar.location": "right",
+    "workbench.statusBar.visible": true,
+    "editor.unicodeHighlight.ambiguousCharacters": false,
+    "editor.acceptSuggestionOnCommitCharacter": false,
+    "workbench.colorCustomizations": {
+        "terminal.background": "#00000000",
+        "editorPane.background": "#1e1e2e00",
+        "editorGroupHeader.tabsBackground": "#1e1e2e00",
+        "editorGroupHeader.noTabsBackground": "#1e1e2e00",
+        "breadcrumb.background": "#1e1e2e00",
+        "editorGutter.background": "#1e1e2e00",
+        "panel.background": "#1e1e2e00",
+        "panelStickyScroll.background": "#1e1e2e00",
+        "tab.activeBackground": "#1e1e2e00",
+        "tab.unfocusedActiveBackground": "#1e1e2e00",
+        "sideBar.background": "#1e1e2ef6",
+        "sideBarTitle.background": "#1e1e2ef6",
+        "sideBarStickyScroll.background": "#1e1e2ef6",
+        "activityBar.background": "#1e1e2ef6",
+        "editor.background": "#1e1e2ef6",
+        "editorStickyScroll.background": "#1e1e2ef6",
+        "editorStickyScrollGutter.background": "#1e1e2ef6",
+        "tab.inactiveBackground": "#1e1e2ef6",
+        "tab.unfocusedInactiveBackground": "#1e1e2ef6",
+        "inlineChat.background": "#1e1e2ee6",
+        "editorWidget.background": "#1e1e2ee6",
+        "editorHoverWidget.background": "#1e1e2ee6",
+        "editorSuggestWidget.background": "#1e1e2ee6",
+        "notifications.background": "#1e1e2ee6",
+        "notificationCenterHeader.background": "#1e1e2ee6",
+        "menu.background": "#1e1e2ee6",
+        "quickInput.background": "#1e1e2ee6"
+    },
+    "window.autoDetectColorScheme": false,
+    "window.controlsStyle": "custom",
+    //
+    // Transparency
+    "vscode_vibrancy.theme": "Custom theme (use imports)",
+    "vscode_vibrancy.opacity": 0.965,
+    "workbench.colorTheme": "Kanagawa Wave",
+    "vscode_vibrancy.preferedDarkTheme": "Custom theme (use imports)",
+    "vscode_vibrancy.type": "transparent",
+    "vscode_vibrancy.preferedLightTheme": "Custom theme (use imports)",
+    "vscode_vibrancy.imports": [
+        "/home/albert/dotfiles/codium/themes/Kanagawa Wave.css",
+        "/home/albert/dotfiles/codium/themes/Kanagawa Wave.json"
+    ],
+    "workbench.preferredDarkColorTheme": "Kanagawa Wave"
+}

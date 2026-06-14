@@ -1,0 +1,188 @@
+/* ============================================================
+   Kanagawa Dragon — VS Code Vibrancy theme
+   Palette source: lua/kanagawa/colors.lua
+   Base: dragonBlack3 (#181616)
+   ============================================================ */
+
+:root {
+  --base-background: rgba(24, 22, 22, 0.01) !important;  /* dragonBlack3 */
+  --editor-background: transparent !important;
+}
+
+/* ── Scrollbar decoration ─────────────────────────────────── */
+.scroll-decoration {
+  box-shadow: none !important;
+}
+
+/* ── Minimap / overview ruler ────────────────────────────── */
+.minimap,
+.editor-scrollable > .decorationsOverviewRuler {
+  opacity: 0.6;
+}
+
+/* ── Editor container ─────────────────────────────────────── */
+.editor-container:not(.modal-editor-part .editor-container) {
+  background-color: var(--base-background) !important;
+}
+
+/* ── Modal / inline chat ──────────────────────────────────── */
+.modal-editor-part > .content,
+.modal-editor-part .editor-container,
+.inline-chat-gutter-menu {
+  background-color: var(--vscode-quickInput-background) !important;
+}
+
+/* ── Global transparent areas ─────────────────────────────── */
+.search-view .search-widget .input-box,
+.search-view .search-widget .input-box .monaco-inputbox,
+.monaco-workbench
+  .part.editor
+  > .content
+  > .one-editor-silo
+  > .container
+  > .title
+  .tabs-container
+  > .tab,
+.monaco-editor-background,
+.monaco-editor .margin,
+.monaco-workbench .part:not(.modal-editor-part) > .content,
+.monaco-workbench .editor > .content > .one-editor-silo.editor-one,
+.monaco-workbench
+  .part.editor
+  > .content
+  > .one-editor-silo
+  > .container
+  > .title,
+.monaco-workbench .part > .title,
+.monaco-workbench,
+.monaco-workbench .part,
+body {
+  background: var(--editor-background) !important;
+}
+
+/* ── Tab bar ──────────────────────────────────────────────── */
+.editor-group-container > .tabs {
+  background-color: var(--base-background) !important;
+}
+
+.editor-group-container > .tabs .tab {
+  background-color: var(--base-background) !important;
+  border: none !important;
+}
+
+/* Active tab: dragonBlack5 tint */
+.editor-group-container > .tabs .tab.active,
+.editor-group-container > .tabs .monaco-breadcrumbs {
+  background-color: rgba(57, 56, 54, 0.45) !important; /* dragonBlack5 */
+}
+
+/* ── Settings tree ────────────────────────────────────────── */
+.monaco-list.settings-toc-tree .monaco-list-row.focused {
+  outline-color: rgba(57, 56, 54, 0.7) !important; /* dragonBlack5 */
+}
+
+.monaco-list.settings-toc-tree .monaco-list-row.selected,
+.monaco-list.settings-toc-tree .monaco-list-row.focused,
+.monaco-list.settings-toc-tree
+  .monaco-list-row:hover:not(.selected):not(.focused) {
+  background-color: rgba(40, 39, 39, 0.8) !important; /* dragonBlack4 */
+}
+
+/* ── List row hover: dragonGray tint ────────────────────── */
+.monaco-list-row:hover:not(.selected):not(.focused) {
+  background-color: rgba(166, 166, 156, 0.12) !important; /* dragonGray */
+  color: rgb(197, 201, 197) !important;                    /* dragonWhite */
+}
+
+.monaco-list.settings-editor-tree .monaco-list-row {
+  background-color: var(--base-background) !important;
+  outline-color: transparent !important;
+}
+
+/* ── Input box: dragonBlack4 tint ───────────────────────── */
+.monaco-inputbox {
+  background-color: rgba(40, 39, 39, 0.3) !important; /* dragonBlack4 */
+}
+
+/* ── Text selection: dragonBlue2 ─────────────────────────── */
+.monaco-editor .selected-text {
+  background-color: rgba(139, 164, 176, 0.3) !important; /* dragonBlue2 */
+}
+
+.monaco-editor .focused .selected-text {
+  background-color: rgba(139, 164, 176, 0.45) !important;
+}
+
+/* ── Current line border: dragonBlack6 ──────────────────── */
+.monaco-editor .view-overlays .current-line {
+  border-color: rgba(98, 94, 90, 0.35) !important; /* dragonBlack6 */
+}
+
+/* ── Editor backgrounds ───────────────────────────────────── */
+.extension-editor,
+.monaco-workbench
+  .part.editor
+  > .content
+  > .one-editor-silo
+  > .container
+  > .title
+  .tabs-container
+  > .tab.active,
+.preferences-editor > .preferences-header,
+.preferences-editor
+  > .preferences-editors-container.side-by-side-preferences-editor
+  .preferences-header-container,
+.monaco-editor,
+.monaco-editor .inputarea.ime-input,
+.monaco-list .monaco-list-rows {
+  background: var(--base-background) !important;
+}
+
+/* ── Sidebar ──────────────────────────────────────────────── */
+.monaco-workbench .part.sidebar {
+  background-color: var(--base-background) !important;
+}
+
+/* ── Terminal ─────────────────────────────────────────────── */
+.terminal-outer-container,
+.xterm-viewport,
+.xterm-rows {
+  background-color: var(--base-background) !important;
+}
+
+/* ── Fullscreen fallback: dragonBlack3 ──────────────────── */
+.monaco-workbench.fullscreen {
+  background-color: #181616 !important;
+}
+
+/* ── Notebook / margin overlays ──────────────────────────── */
+.notebookOverlay.notebook-editor,
+.cell-statusbar-container,
+.margin-view-overlays,
+.monaco-list-row:hover:not(.selected):not(.focused) {
+  background-color: var(--base-background) !important;
+}
+
+/* ── Pane header ──────────────────────────────────────────── */
+.pane-header {
+  background-color: var(--base-background) !important;
+}
+
+/* ── Empty editor group ───────────────────────────────────── */
+#workbench\.parts\.editor
+  > div.content.empty
+  > div
+  > div
+  > div
+  > div
+  > div.monaco-scrollable-element.mac
+  > div.split-view-container
+  > div
+  > div {
+  background-color: var(--base-background) !important;
+}
+
+/* ── Label contrast: dragonWhite ─────────────────────────── */
+.label-container .label {
+  color: #c5c9c5 !important; /* dragonWhite */
+}

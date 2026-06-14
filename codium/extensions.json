@@ -1,0 +1,27 @@
+{
+  "extensions": [
+    "bradlc.vscode-tailwindcss",
+    "charliermarsh.ruff",
+    "davidanson.vscode-markdownlint",
+    "github.vscode-github-actions",
+    "gitlab.gitlab-workflow",
+    "haphazarddev.oil-code",
+    "illixion.vscode-vibrancy-continued",
+    "kylinideteam.cppdebug",
+    "llvm-vs-code-extensions.vscode-clangd",
+    "metaphore.kanagawa-vscode-color-theme",
+    "ms-python.debugpy",
+    "ms-python.python",
+    "ms-python.vscode-python-envs",
+    "ms-vscode.cmake-tools",
+    "mtxr.sqltools",
+    "nefrob.vscode-just-syntax",
+    "nromanov.dotrush",
+    "ritwickdey.liveserver",
+    "rust-lang.rust-analyzer",
+    "svelte.svelte-vscode",
+    "tamasfe.even-better-toml",
+    "vadimcn.vscode-lldb",
+    "vscodevim.vim"
+  ]
+}

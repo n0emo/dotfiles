@@ -1,0 +1,15 @@
+{
+  "type": {
+    "win10": "acrylic",
+    "macos": "under-window",
+    "linux": "transparent"
+  },
+  "background": "181616",
+  "opacity": {
+    "win10": 0.85,
+    "macos": 0.2,
+    "linux": 0.85
+  },
+  "colorTheme": "Kanagawa Dragon",
+  "systemColorTheme": "dark"
+}
