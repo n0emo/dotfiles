@@ -99,6 +99,7 @@ function install_plugins()
     "https://github.com/nvim-lualine/lualine.nvim",
     "https://github.com/catgoose/nvim-colorizer.lua",
     "https://github.com/johmsalas/text-case.nvim",
+    "https://github.com/seblyng/roslyn.nvim",
   })
 
   vim.cmd.colorscheme("kanagawa")
@@ -289,6 +290,16 @@ function install_plugins()
     names = false,
   })
 
+  require("roslyn").setup({
+    settings = {
+      ["csharp|background_analysis"] = {
+        dotnet_analyzer_diagnostics_scope = "fullSolution",
+        dotnet_compiler_diagnostics_scope = "fullSolution",
+      },
+      filewatching = "roslyn",
+    },
+  })
+
   require("textcase").setup({})
   require("telescope").load_extension("textcase")
 end
@@ -296,7 +307,6 @@ end
 function configure_lsp()
   vim.lsp.enable({
     "clangd",
-    "csharp_ls",
     "gopls",
     "html",
     "jinja_lsp",
@@ -305,6 +315,7 @@ function configure_lsp()
     "nim_langserver",
     "ols",
     "pyright",
+    "roslyn",
     "rust_analyzer",
     "svelte",
     "tailwindcss",
@@ -314,6 +325,13 @@ function configure_lsp()
 
   vim.lsp.config("clangd", {
     cmd = { "clangd", "--header-insertion=never" },
+  })
+
+  vim.lsp.config("roslyn", {
+    cmd = {
+      "roslyn-language-server",
+      "--stdio",
+    },
   })
 
   vim.api.nvim_create_autocmd("LspAttach", {
