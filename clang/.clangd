@@ -1,4 +1,3 @@
----
 If:
   PathMatch: [.*\.hpp, .*\.cpp]
 
@@ -11,4 +10,3 @@ Diagnostics:
   ClangTidy:
     Add: ["modernize*", "bugprone*", "cppcoreguidelines*"]
 
----

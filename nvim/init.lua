@@ -123,7 +123,7 @@ function install_plugins()
 
   require("telescope").setup({
     defaults = {
-      file_ignore_patterns = { "build" },
+      file_ignore_patterns = { "build", "vendor" },
       path_display = { "absolute" },
       mappings = {
         i = {
@@ -311,9 +311,12 @@ function configure_lsp()
     "html",
     "jinja_lsp",
     "just",
+    "laravel_lsp",
     "lua_ls",
+    "neocmake",
     "nim_langserver",
     "ols",
+    "php_lsp",
     "pyright",
     "roslyn",
     "rust_analyzer",
@@ -332,6 +335,25 @@ function configure_lsp()
       "roslyn-language-server",
       "--stdio",
     },
+  })
+
+  vim.lsp.config("php_lsp", {
+    cmd = { "php-lsp" },
+    filetypes = { "php" },
+    root_markers = { "composer.json", ".git" },
+    workspace_required = true,
+  })
+
+  vim.lsp.config("laravel_lsp", {
+    cmd = { "laravel-lsp" },
+    filetypes = { "php", "blade" },
+    root_dir = function(bufnr, on_dir)
+      local root = vim.fs.root(bufnr, "artisan")
+
+      if root then
+        on_dir(root)
+      end
+    end,
   })
 
   vim.api.nvim_create_autocmd("LspAttach", {
